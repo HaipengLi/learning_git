@@ -1,7 +1,6 @@
 # learn_git
 
 - 分布式版本控制系统
-- sd
 
 ## 创建版本库(repository)
 `mkdir learn_git` 新建文件夹
@@ -69,13 +68,13 @@
 > 5b7b171 HEAD@{1}: commit: change for the first time
 > 2b069c7 HEAD@{2}: commit (initial): wrote a diary
 
-## 撤销修改
+## 撤销修改（三个场景）
 
 > Git管理的是修改，而不是文件
 
 ----
 
-### 还未add
+### c1: 还未add
 
 > 情形： 对当前working directory修改不满意，想要放弃修改，即恢复上一次commit或者是add的状态（取最新）
 
@@ -83,6 +82,14 @@
 
 ----
 
-## added, 还未commit
+### c2: added, 还未commit
 
-`git reset HEAD learn_git.md`
+`git reset HEAD learn_git.md` 可以将master中已经commit的文件恢复到stage。之后可用`git checkout -- learn_git.md` 将文件再恢复到working directory
+
+---
+### c3: commited
+只能采用版本回退，即`git reset --hard HEAD^`
+
+## 删除文件
+
+`git rm python_learning_di` 删除某文件在stage中
