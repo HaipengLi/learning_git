@@ -69,3 +69,8 @@
 > 5b7b171 HEAD@{1}: commit: change for the first time
 > 2b069c7 HEAD@{2}: commit (initial): wrote a diary
 
+## 管理修改
+
+> Git管理的是修改，而不是文件
+
+hahaha
