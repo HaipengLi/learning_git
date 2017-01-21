@@ -69,8 +69,20 @@
 > 5b7b171 HEAD@{1}: commit: change for the first time
 > 2b069c7 HEAD@{2}: commit (initial): wrote a diary
 
-## 管理修改
+## 撤销修改
 
 > Git管理的是修改，而不是文件
 
-hahaha
+----
+
+### 还未add
+
+> 情形： 对当前working directory修改不满意，想要放弃修改，即恢复上一次commit或者是add的状态（取最新）
+
+`git checkout -- learn_git.md` 将最近一个add或者commit的文件恢复到working directory中，即放弃当前对working directory中某文件的修改
+
+----
+
+## added, 还未commit
+
+`git reset HEAD learn_git.md`
